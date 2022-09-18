@@ -1,52 +1,44 @@
-public class ControladorDeLetrasJaDigitadas implements Cloneable
-{
+public class ControladorDeLetrasJaDigitadas implements Cloneable {
     private String letrasJaDigitadas;
 
-    public ControladorDeLetrasJaDigitadas ()
-    {
+    public ControladorDeLetrasJaDigitadas() {
         // torna this.letrasJaDigitadas igual ao String vazio
     }
 
-    public boolean isJaDigitada (char letra)
-    {
+    public boolean isJaDigitada(char letra) {
         // percorrer o String this.letrasJaDigitadas e verificar se ele
         // possui a letra fornecida, retornando true em caso afirmativo
         // ou false em caso negativo
     }
 
-    public void registre (char letra) throws Exception
-    {
-		// verifica se a letra fornecida ja foi digitada (pode usar
-		// o método this.isJaDigitada, para isso), lancando uma exceção
-		// em caso afirmativo.
-		// concatena a letra fornecida a this.letrasJaDigitadas.
+    public void registre(char letra) throws Exception {
+        // verifica se a letra fornecida ja foi digitada (pode usar
+        // o mÃ©todo this.isJaDigitada, para isso), lancando uma exceï¿½ï¿½o
+        // em caso afirmativo.
+        // concatena a letra fornecida a this.letrasJaDigitadas.
     }
 
-    public String toString ()
-    {
-		// retorna um String com TODAS as letras presentes em
-		// this.letrasJaDigitadas separadas por vírgula (,).
+    public String toString() {
+        // retorna um String com TODAS as letras presentes em
+        // this.letrasJaDigitadas separadas por vï¿½rgula (,).
     }
 
-    public boolean equals (Object obj)
-    {
-        // verificar se this e obj são iguais
+    public boolean equals(Object obj) {
+        // verificar se this e obj sï¿½o iguais
     }
 
-    public int hashCode ()
-    {
+    public int hashCode() {
         // calcular e retornar o hashcode de this
     }
 
     public ControladorDeLetrasJaDigitadas(
-    ControladorDeLetrasJaDigitadas controladorDeLetrasJaDigitadas)
-    throws Exception // construtor de cópia
+            ControladorDeLetrasJaDigitadas controladorDeLetrasJaDigitadas)
+            throws Exception // construtor de cï¿½pia
     {
         // copiar c.letrasJaDigitadas em this.letrasJaDigitadas
     }
 
-    public Object clone ()
-    {
-        // criar uma cópia do this com o construtor de cópia e retornar
+    public Object clone() {
+        // criar uma cï¿½pia do this com o construtor de cï¿½pia e retornar
     }
 }
