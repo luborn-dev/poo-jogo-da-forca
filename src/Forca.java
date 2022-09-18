@@ -1,4 +1,4 @@
-import java.io.*;
+// import java.io.*;
 
 public class Forca {
 	public static void main(String args[]) {

@@ -59,11 +59,14 @@ public class Palavra implements Comparable<Palavra> {
     }
 
     public boolean equals(Object obj) {
+        return false;
         // verificar se this e obj possuem o mesmo conte�do, retornando
         // true no caso afirmativo ou false no caso negativo
     }
 
     public int hashCode() {
+        return 1;
+
         // calcular e retornar o hashcode de this
     }
 

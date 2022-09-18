@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-import java.io.*;
+//import java.io.*;
 
 public class Teclado {
     private static BufferedReader teclado = new BufferedReader(

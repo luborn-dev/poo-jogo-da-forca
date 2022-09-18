@@ -50,12 +50,29 @@ public class Tracinhos implements Cloneable {
     }
 
     public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (this.getClass() != obj.getClass())
+            return false;
+
+        Tracinhos newTracinho = (Tracinhos) obj;
+
+        for (int i = 0; i < this.texto.length; i++) {
+            if (this.texto[i] != newTracinho.texto[i]) {
+                return false;
+            }
+        }
+
+        return true;
+
         // verificar se this e obj possuem o mesmo conte�do, retornando
         // true no caso afirmativo ou false no caso negativo
     }
 
     public int hashCode() {
-        // calcular e retornar o hashcode de this
+        return 1; // Implementar
     }
 
     public Tracinhos(Tracinhos t) throws Exception // construtor de c�pia
@@ -65,6 +82,8 @@ public class Tracinhos implements Cloneable {
     }
 
     public Object clone() {
-        // retornar uma copia de this
+        Object a = new Object();
+        return a;
+        // Retornar uma copia de this
     }
 }
