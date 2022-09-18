@@ -71,19 +71,18 @@ public class Tracinhos implements Cloneable {
         // true no caso afirmativo ou false no caso negativo
     }
 
-    public int hashCode() {
-        return 1; // Implementar
-    }
+    // public int hashCode() {
+    // // Implementar
+    // }
 
-    public Tracinhos(Tracinhos t) throws Exception // construtor de c�pia
-    {
-        // intanciar this.texto um vetor com o mesmo tamanho de t.texto
-        // e copilar o conte�do de t.texto para this.texto
-    }
+    // public Tracinhos(Tracinhos t) throws Exception // construtor de c�pia
+    // {
+    // // intanciar this.texto um vetor com o mesmo tamanho de t.texto
+    // // e copilar o conte�do de t.texto para this.texto
+    // }
 
-    public Object clone() {
-        Object a = new Object();
-        return a;
-        // Retornar uma copia de this
-    }
+    // public Object clone() {
+
+    // // Retornar uma copia de this
+    // }
 }

@@ -32,26 +32,22 @@ public class ControladorDeErros implements Cloneable {
         return this.qtdErr + "/" + this.qtdMax;
     }
 
-    public boolean equals(Object obj) {
-        return false;
-        // verificar se this e obj possuem o mesmo conte�do, retornando
-        // true no caso afirmativo ou false no caso negativo
-    }
+    // public boolean equals(Object obj) {
+    // // verificar se this e obj possuem o mesmo conte�do, retornando
+    // // true no caso afirmativo ou false no caso negativo
+    // }
 
-    public int hashCode() {
-        return 1;
-        // calcular e retornar o hashcode de this
-    }
+    // public int hashCode() {
+    // // calcular e retornar o hashcode de this
+    // }
 
-    public ControladorDeErros(ControladorDeErros c) throws Exception // construtor de c�pia
-    {
-        // copiar c.qtdMax e c.qtdErr, respectivamente em, this.qtdMax e this.qtdErr
-    }
+    // public ControladorDeErros(ControladorDeErros c) throws Exception //
+    // construtor de c�pia
+    // {
+    // // copiar c.qtdMax e c.qtdErr, respectivamente em, this.qtdMax e this.qtdErr
+    // }
 
-    public Object clone() {
-        Object a = new Object();
-        return a;
-
-        // returnar uma c�pia de this
-    }
+    // public Object clone() {
+    // // returnar uma c�pia de this
+    // }
 }

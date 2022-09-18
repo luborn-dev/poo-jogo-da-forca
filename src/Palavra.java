@@ -1,11 +1,13 @@
 public class Palavra implements Comparable<Palavra> {
     private String texto;
+    private int posDaUltima;
 
     public Palavra(String texto) throws Exception {
         if (texto == null || texto == "") {
             throw new Exception("Inválido");
         }
         this.texto = texto;
+        this.posDaUltima = 0;
         // verifica se o texto recebido � nulo ou ent�o vazio,
         // ou seja, sem nenhum caractere, lan�ando exce��o.
         // armazena o texto recebido em this.texto.
@@ -25,19 +27,14 @@ public class Palavra implements Comparable<Palavra> {
 
     public int getPosicaoDaIezimaOcorrencia(int i, char letra) throws Exception {
 
-        if (i == 0) {
-            return this.texto.indexOf(letra);
-        }
-        ;
-        if (i == 1) {
-            return this.texto.indexOf(letra);
-        }
-        ;
-        if (i == 2) {
+        if (i == 0)
+            this.posDaUltima = this.texto.indexOf(letra);
 
-        }
-        for (int j = 0; j < i; j++)
-            ;
+        if (i >= 1)
+            this.posDaUltima = this.texto.indexOf(letra, this.posDaUltima) + 1;
+
+        return this.texto.indexOf(letra, this.posDaUltima);
+
         // se i==0, retorna a posicao em que ocorre a primeira
         // aparicao de letra fornecida em this.texto;
         // se i==1, retorna a posicao em que ocorre a segunda
@@ -47,7 +44,7 @@ public class Palavra implements Comparable<Palavra> {
         // e assim por diante.
         // lan�ar excecao caso nao encontre em this.texto
         // a I�zima apari��o da letra fornecida.
-        return 1;
+
     }
 
     public int getTamanho() {
@@ -58,17 +55,14 @@ public class Palavra implements Comparable<Palavra> {
         return this.texto;
     }
 
-    public boolean equals(Object obj) {
-        return false;
-        // verificar se this e obj possuem o mesmo conte�do, retornando
-        // true no caso afirmativo ou false no caso negativo
-    }
+    // public boolean equals(Object obj) {
+    // // verificar se this e obj possuem o mesmo conte�do, retornando
+    // // true no caso afirmativo ou false no caso negativo
+    // }
 
-    public int hashCode() {
-        return 1;
-
-        // calcular e retornar o hashcode de this
-    }
+    // public int hashCode() {
+    // // calcular e retornar o hashcode de this
+    // }
 
     public int compareTo(Palavra palavra) {
         return this.texto.compareTo(palavra.texto);

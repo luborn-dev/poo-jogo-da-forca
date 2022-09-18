@@ -44,26 +44,25 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable {
         // this.letrasJaDigitadas separadas por v�rgula (,).
     }
 
-    public boolean equals(Object obj) {
-        return true;
-        // verificar se this e obj s�o iguais
-    }
+    // public boolean equals(Object obj) {
 
-    public int hashCode() {
-        return 1;
-        // calcular e retornar o hashcode de this
-    }
+    // // verificar se this e obj s�o iguais
+    // }
 
-    public ControladorDeLetrasJaDigitadas(
-            ControladorDeLetrasJaDigitadas controladorDeLetrasJaDigitadas)
-            throws Exception // construtor de c�pia
-    {
-        // copiar c.letrasJaDigitadas em this.letrasJaDigitadas
-    }
+    // public int hashCode() {
 
-    public Object clone() {
-        Object a = new Object();
-        return a;
-        // criar uma c�pia do this com o construtor de c�pia e retornar
-    }
+    // // calcular e retornar o hashcode de this
+    // }
+
+    // public ControladorDeLetrasJaDigitadas(
+    // ControladorDeLetrasJaDigitadas controladorDeLetrasJaDigitadas)
+    // throws Exception // construtor de c�pia
+    // {
+    // // copiar c.letrasJaDigitadas em this.letrasJaDigitadas
+    // }
+
+    // public Object clone() {
+
+    // // criar uma c�pia do this com o construtor de c�pia e retornar
+    // }
 }
