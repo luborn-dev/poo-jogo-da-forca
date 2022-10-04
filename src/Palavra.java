@@ -1,7 +1,7 @@
 public class Palavra implements Comparable<Palavra> {
     private String texto;
     private int posDaUltima;
-    private char escrita[];
+    // private char escrita[];
 
     public Palavra(String texto) throws Exception {
         if (texto == null || texto == "") {
@@ -27,6 +27,12 @@ public class Palavra implements Comparable<Palavra> {
     }
 
     public int getPosicaoDaIezimaOcorrencia(int i, char letra) throws Exception {
+        if (i < 0) {
+            throw new Exception("Valor menor que 0 ");
+        }
+        if (i >= getQuantidade(letra)) {
+            throw new Exception("Usuario passsou valor errado");
+        }
 
         if (i == 0)
             this.posDaUltima = this.texto.indexOf(letra);
@@ -57,7 +63,7 @@ public class Palavra implements Comparable<Palavra> {
     }
 
     public boolean equals(Object obj) {
-        
+
         if (this == obj)
             return true;
         if (obj == null)
@@ -67,15 +73,15 @@ public class Palavra implements Comparable<Palavra> {
 
         Palavra newPalavra = (Palavra) obj;
         for (int i = 0; i < this.texto.length(); i++) {
-             if (this.escrita[i] != newPalavra.escrita[i]) {
-  
-            return false;
-        }
-    }
+            if (this.texto.charAt(i) != newPalavra.texto.charAt(i)) {
 
-    return true;
-    // verificar se this e obj possuem o mesmo conte�do, retornando
-    // true no caso afirmativo ou false no caso negativo
+                return false;
+            }
+        }
+
+        return true;
+        // verificar se this e obj possuem o mesmo conte�do, retornando
+        // true no caso afirmativo ou false no caso negativo
 
     }
 
@@ -93,7 +99,7 @@ public class Palavra implements Comparable<Palavra> {
 
         // // calcular e retornar o hashcode de this
 
-     }
+    }
 
     public int compareTo(Palavra palavra) {
         return this.texto.compareTo(palavra.texto);
