@@ -44,25 +44,49 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable {
         // this.letrasJaDigitadas separadas por v�rgula (,).
     }
 
-    // public boolean equals(Object obj) {
+    public boolean equals(Object obj) {
 
-    // // verificar se this e obj s�o iguais
-    // }
+        if (this == obj) {
+            return true;
+        }
+        ControladorDeLetrasJaDigitadas cContLetras = (ControladorDeLetrasJaDigitadas) obj;
+        if (this.letrasJaDigitadas.equals(cContLetras.letrasJaDigitadas)) {
+            return true;
+        }
+        return false;
+        // // verificar se this e obj s�o iguais
+    }
 
-    // public int hashCode() {
+    public int hashCode() {
+        int ret = 9999;
 
-    // // calcular e retornar o hashcode de this
-    // }
+        ret = 11 * ret + letrasJaDigitadas.hashCode();
 
-    // public ControladorDeLetrasJaDigitadas(
-    // ControladorDeLetrasJaDigitadas controladorDeLetrasJaDigitadas)
-    // throws Exception // construtor de c�pia
-    // {
-    // // copiar c.letrasJaDigitadas em this.letrasJaDigitadas
-    // }
+        if (ret < 0)
+            ret = -ret;
+        return ret;
+        // calcular e retornar o hashcode de this
+    }
 
-    // public Object clone() {
+    public ControladorDeLetrasJaDigitadas(
+            ControladorDeLetrasJaDigitadas controladorDeLetrasJaDigitadas)
+            throws Exception {
+        if (controladorDeLetrasJaDigitadas != null) {
+            this.letrasJaDigitadas = controladorDeLetrasJaDigitadas.letrasJaDigitadas;
+        }
+        throw new Exception("Controlador já é NULO!!!");
+        // copiar c.letrasJaDigitadas em this.letrasJaDigitadas
+    }
 
-    // // criar uma c�pia do this com o construtor de c�pia e retornar
-    // }
+    public Object clone() {
+        ControladorDeLetrasJaDigitadas cContLetras = null;
+        try {
+            cContLetras = new ControladorDeLetrasJaDigitadas();
+            cContLetras = this;
+        } catch (Exception erro) {
+            System.out.println("erro005");
+        }
+        return cContLetras;
+        // criar uma c�pia do this com o construtor de c�pia e retornar
+    }
 }
