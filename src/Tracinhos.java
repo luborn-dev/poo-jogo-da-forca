@@ -3,7 +3,7 @@ public class Tracinhos implements Cloneable {
 
     public Tracinhos(int qtd) throws Exception {
 
-        if (qtd < 0)
+        if (qtd <= 0)
             throw new Exception("Quantidade inválida");
         this.texto = new char[qtd];
         for (int i = 0; i < qtd; i++) {
@@ -85,32 +85,28 @@ public class Tracinhos implements Cloneable {
 
     public Tracinhos(Tracinhos t) throws Exception // construtor de c�pia
     {
-       if (t == null)
-       {
-         throw new Exception("Marcador nulo, ele não pode ser copiado!!");
-       }
-       for(int i = 0; i <t.texto.length; i++)
-       {
-         this.texto[i] = t.texto[i];
-       }
+        if (t == null) {
+            throw new Exception("Marcador nulo, ele não pode ser copiado!!");
+        }
+        for (int i = 0; i < t.texto.length; i++) {
+            this.texto[i] = t.texto[i];
+        }
 
-    // // intanciar this.texto um vetor com o mesmo tamanho de t.texto
-    // // e copilar o conte�do de t.texto para this.texto
+        // // intanciar this.texto um vetor com o mesmo tamanho de t.texto
+        // // e copilar o conte�do de t.texto para this.texto
     }
 
     public Object clone() {
 
         Tracinhos ret = null;
 
-        try
-        {
-            ret = new Tracinhos (this) ; 
+        try {
+            ret = new Tracinhos(this);
 
+        } catch (Exception erro) {
         }
-        catch (Exception erro)
-        {}
         return ret;
 
-    // // Retornar uma copia de this
-     }
+        // // Retornar uma copia de this
+    }
 }

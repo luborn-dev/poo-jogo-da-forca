@@ -17,7 +17,7 @@ public class ControladorDeErros implements Cloneable {
         this.qtdErr++;
         // verifica se this.qtdErr ja � igual a this.qtdMax,
         // lan�ando excecao em caso positivo ou
-        // incrementando this.qtdErr em caso    negativo
+        // incrementando this.qtdErr em caso negativo
     }
 
     public boolean isAtingidoMaximoDeErros() {
@@ -32,57 +32,54 @@ public class ControladorDeErros implements Cloneable {
         return this.qtdErr + "/" + this.qtdMax;
     }
 
-     public boolean equals(Object obj) {
-    // // verificar se this e obj possuem o mesmo conte�do, retornando
-    // // true no caso afirmativo ou false no caso negativo
+    public boolean equals(Object obj) {
+        // // verificar se this e obj possuem o mesmo conte�do, retornando
+        // // true no caso afirmativo ou false no caso negativo
         if (this == obj) {
             return true;
         }
         ControladorDeErros cControler = (ControladorDeErros) obj;
 
-        if(this.qtdMax == cControler.qtdMax){
+        if (this.qtdMax == cControler.qtdMax) {
             return true;
 
-        } if(this.qtdErr == cControler.qtdErr){
+        }
+        if (this.qtdErr == cControler.qtdErr) {
             return true;
         }
         return false;
-        //  this.qtdMax == cControler.qtdMax && this.qtdErr == cControler.qtdErr;
-     }
+        // this.qtdMax == cControler.qtdMax && this.qtdErr == cControler.qtdErr;
+    }
 
     public int hashCode() {
         int ret = 9999;
 
         ret = 11 * ret + qtdErr;
         ret = 11 * ret + qtdMax;
-        
+
         if (ret < 0)
             ret = -ret;
         return ret;
         // calcular e retornar o hashcode de this
     }
-    
+
     public ControladorDeErros(ControladorDeErros ControladorDeErros)
-    throws Exception
-    {
-        if(ControladorDeErros != null) {
+            throws Exception {
+        if (ControladorDeErros != null) {
             this.qtdErr = ControladorDeErros.qtdErr;
             this.qtdMax = ControladorDeErros.qtdMax;
         }
         throw new Exception("Controlador já é NULO!!!");
     }
 
-    
     public Object clone() {
         ControladorDeErros cControler = null;
         try {
-            cControler = new ControladorDeErros(this);
-        }
-        catch (Exception erro)
-        {
+            cControler = new ControladorDeErros(this.qtdMax);
+        } catch (Exception erro) {
             System.out.println("erro006");
         }
         return cControler;
-    // criar uma c�pia do this com o construtor de c�pia e retornar
+        // criar uma c�pia do this com o construtor de c�pia e retornar
     }
 }

@@ -50,18 +50,18 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable {
             return true;
         }
         ControladorDeLetrasJaDigitadas cContLetras = (ControladorDeLetrasJaDigitadas) obj;
-        if(this.letrasJaDigitadas.equals(cContLetras.letrasJaDigitadas)){
+        if (this.letrasJaDigitadas.equals(cContLetras.letrasJaDigitadas)) {
             return true;
         }
         return false;
-    // // verificar se this e obj s�o iguais
-     }
+        // // verificar se this e obj s�o iguais
+    }
 
-     public int hashCode() {
+    public int hashCode() {
         int ret = 9999;
 
         ret = 11 * ret + letrasJaDigitadas.hashCode();
-        
+
         if (ret < 0)
             ret = -ret;
         return ret;
@@ -69,10 +69,9 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable {
     }
 
     public ControladorDeLetrasJaDigitadas(
-    ControladorDeLetrasJaDigitadas controladorDeLetrasJaDigitadas)
-    throws Exception 
-    {
-        if(controladorDeLetrasJaDigitadas != null) {
+            ControladorDeLetrasJaDigitadas controladorDeLetrasJaDigitadas)
+            throws Exception {
+        if (controladorDeLetrasJaDigitadas != null) {
             this.letrasJaDigitadas = controladorDeLetrasJaDigitadas.letrasJaDigitadas;
         }
         throw new Exception("Controlador já é NULO!!!");
@@ -82,13 +81,12 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable {
     public Object clone() {
         ControladorDeLetrasJaDigitadas cContLetras = null;
         try {
-            cContLetras = new ControladorDeLetrasJaDigitadas(this);
-        }
-        catch (Exception erro)
-        {
+            cContLetras = new ControladorDeLetrasJaDigitadas();
+            cContLetras = this;
+        } catch (Exception erro) {
             System.out.println("erro005");
         }
         return cContLetras;
-    // criar uma c�pia do this com o construtor de c�pia e retornar
+        // criar uma c�pia do this com o construtor de c�pia e retornar
     }
 }
