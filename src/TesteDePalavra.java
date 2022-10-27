@@ -270,6 +270,15 @@ class TesteDePalavra {
     } catch (Exception erro) {
       System.err.println("Deu erro usar o metodo clone");
     }
-
+    Palavra tt2;
+    Palavra tt3;
+    try {
+      tt2 = new Palavra("Tes");
+      tt3 = new Palavra("Teste");
+      System.out.println("--> " + tt2.hashCode());
+      System.out.println("--> " + tt3.hashCode());
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 }
