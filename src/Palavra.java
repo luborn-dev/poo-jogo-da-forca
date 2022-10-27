@@ -88,9 +88,7 @@ public class Palavra implements Comparable<Palavra> {
     public int hashCode() {
         int ret = 9999;
 
-        for (int i = 0; i < texto.length(); i++) {
-            ret = 11 * ret + (int) texto.charAt(i);
-        }
+        ret = 11 * ret + texto.hashCode();
 
         if (ret < 0) {
             ret = -ret;

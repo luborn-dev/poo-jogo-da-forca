@@ -37,7 +37,7 @@ public class Forca {
             controladorDeLetrasJaDigitadas.registre(letra);
 
             int qtd = palavra.getQuantidade(letra);
-            System.out.println(qtd);
+//            System.out.println(qtd);
             if (qtd == 0) {
               System.err.println("A palavra nao tem essa letra!\n");
               controladorDeErros.registreUmErro();
@@ -45,7 +45,7 @@ public class Forca {
               for (int i = 0; i < qtd; i++) {
                 int posicao = palavra.getPosicaoDaIezimaOcorrencia(i, letra);
                 tracinhos.revele(posicao, letra);
-                System.out.println(i);
+//                System.out.println(i);
 
               }
               System.out.println();
